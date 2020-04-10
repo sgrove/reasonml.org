@@ -34,14 +34,14 @@ const title = payload.PostTitle;
 In this case, when writing bindings to the JavaScript object, you can use the `[@bs.as "whatever-name-you-want-in-javascript"]` to tell the compiler exactly what the JavaScript attribute name should be in the compiled output:
 
 ```reason
-type payload {
+type payload = {
     [@bs.as "PostTitle"]
     postTitle: string
-}
+};
 
 let payload = {
     postTitle: "Welcome to Reason"
-}
+};
 
 /* Reason is happy since we're using the valid `postTitle` field name */
 let title = payload.postTitle;
